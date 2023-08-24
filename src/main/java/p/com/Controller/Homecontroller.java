@@ -20,8 +20,11 @@ public class Homecontroller {
 	public String add(@RequestBody Student student) {
 		studentservice.add(student);
 
-		return "Data Added";
+		return "Data Added Successfully";
 
 	}
+	
+	
+	
 
 }
