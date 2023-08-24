@@ -23,7 +23,11 @@ public class Homecontroller {
 		return "Data Added Successfully";
 
 	}
-	
+
+	 @GetMapping("/student/id/{id}")
+	    public Student findStudentById(@PathVariable int id) {
+	        return studentservice.findbyid(id);
+	    }
 	
 	
 

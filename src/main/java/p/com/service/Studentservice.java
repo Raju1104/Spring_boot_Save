@@ -1,5 +1,7 @@
 package p.com.service;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -15,5 +17,13 @@ public class Studentservice {
 		studentDao.save(student);
 	}
 
+	 public Student findbyid(int id) {
+	        Optional<Student> optional = studentDao.findById(id);
+	        
+	        if (optional.isPresent()) {
+	            return optional.get();
+	        } else {
+	            throw new RuntimeException("Student Not Found.....: " + id);
+	        }
 	
-}
+}}
