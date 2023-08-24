@@ -26,4 +26,10 @@ public class Studentservice {
 	            throw new RuntimeException("Student Not Found.....: " + id);
 	        }
 	
-}}
+}
+
+	public Student deletebyid(int id) {
+	studentDao.deleteById(id);
+	return null;
+		
+	}}
