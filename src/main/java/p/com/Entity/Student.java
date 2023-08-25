@@ -7,26 +7,26 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="student")
+@Table(name = "student")
 public class Student {
-	
-	@Column(name="id")
+
+	@Column(name = "id")
 	@Id
 	@GeneratedValue
 	private int id;
-	
-	
-	@Column(name="fname")
-	private String fname;
-	
 
-	@Column(name="lname")
+	@Column(name = "fname")
+	private String fname;
+
+	@Column(name = "lname")
 	private String lname;
 
-	@Column(name="address")
+	@Column(name = "address")
 	private String address;
 
-	public Student(){};
+	public Student() {
+	};
+
 	public Student(int id, String fname, String lname, String address) {
 		super();
 		this.id = id;
@@ -66,10 +66,5 @@ public class Student {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	
-	
-	
-	
-	
-	
+
 }

@@ -1,5 +1,7 @@
 package p.com.Controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,15 +27,27 @@ public class Homecontroller {
 
 	}
 
-	 @GetMapping("/student/id/{id}")
-	    public Student findStudentById(@PathVariable int id) {
-	        return studentservice.findbyid(id);
-	    }
-	 @DeleteMapping("/student/id/{id}")
-	    public Student deleteStudentById(@PathVariable int id) {
-	        return studentservice.deletebyid(id);
-	    }
-	
-	
+	@GetMapping("/student/id/{id}")
+	public Student findStudentById(@PathVariable int id) {
+		return studentservice.findbyid(id);
+	}
+
+	@DeleteMapping("/student/id/{id}")
+	public Student deleteStudentById(@PathVariable int id) {
+		return studentservice.deletebyid(id);
+	}
+
+
+	@GetMapping("/student")
+	public List<Student> findall() {
+		List<Student> list = studentservice.findAll();
+		
+		return list ;
+	}
+	@GetMapping("/student/Name/{fname}")
+	public List<Student> findStudentByName(@PathVariable String fname) {
+		List<Student> list = studentservice.findStudentByName(fname);
+		 return list ;
+	}
 
 }
