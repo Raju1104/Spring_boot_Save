@@ -41,8 +41,13 @@ public class Studentservice {
 		return list;
 	}
 
-	public List<Student> findStudentByName(String fname) {
-		List<Student> list = studentDao.findByfname(fname);
+	public List<Student> findStudentByFirstName(String fname) {
+		List<Student> list = studentDao.xyz(fname);
+		return list;
+	}
+
+	public List<Student> findStudentByLastName(String lname) {
+		List<Student> list = studentDao.abc(lname);
 		return list;
 	}
 	
