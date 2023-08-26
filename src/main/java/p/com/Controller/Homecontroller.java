@@ -44,9 +44,14 @@ public class Homecontroller {
 		
 		return list ;
 	}
-	@GetMapping("/student/Name/{fname}")
-	public List<Student> findStudentByName(@PathVariable String fname) {
-		List<Student> list = studentservice.findStudentByName(fname);
+	@GetMapping("/student/firstname/{fname}")
+	public List<Student> findStudentByFirstName(@PathVariable String fname) {
+		List<Student> list = studentservice.findStudentByFirstName(fname);
+		 return list ;
+	}
+	@GetMapping("/student/lastname/{lname}")
+	public List<Student> findByLastName(@PathVariable String lname) {
+		List<Student> list = studentservice.findStudentByLastName(lname);
 		 return list ;
 	}
 
