@@ -20,16 +20,16 @@ public class Homecontroller {
 	@Autowired
 	private Studentservice studentservice;
 	
-	@Value("$(errormsg)")
+	@Value("${errormsg}")
      private String msg;
 	
-	@Value("$(message)")
-    private String emsg;
+	@Value("${message}") 
+    private String msge;
 	
 	@PostMapping("/student")
 	public String add(@RequestBody Student student) {
 		studentservice.add(student);
-		System.out.println(emsg);
+		System.out.println(msge);
 		return "Data Added Successfully";
 
 	}
@@ -37,7 +37,7 @@ public class Homecontroller {
 	@GetMapping("/student/id/{id}")
 	public Student findStudentById(@PathVariable int id) {
 		System.out.println(msg);
-		
+	
 		return studentservice.findbyid(id);
 		
 	}
