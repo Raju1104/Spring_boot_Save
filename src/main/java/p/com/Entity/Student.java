@@ -9,21 +9,21 @@ import javax.validation.constraints.Size;
 
 @Entity
 @Table(name = "student")
-public class Student {
-
+public class Student { 
+	  
 	@Column(name = "id")
 	@Id
 	@GeneratedValue
 	private int id;
 
-	@Size(max = 4,message="Enter Proper Name")
+	@Size(max = 4, message=" Please Enter Proper Name.........")
 	@Column(name = "fname")
 	private String fname;
 
 	@Column(name = "lname")
 	private String lname;
 
-	@Column(name = "address")
+	@Column(name = "address")	 
 	private String address;
 
 	public Student() {
