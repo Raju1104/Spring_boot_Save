@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.Size;
 
 @Entity
 @Table(name = "student")
@@ -15,6 +16,7 @@ public class Student {
 	@GeneratedValue
 	private int id;
 
+	@Size(max = 4,message="Enter Proper Name")
 	@Column(name = "fname")
 	private String fname;
 
