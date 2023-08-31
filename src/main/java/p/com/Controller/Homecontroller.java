@@ -46,7 +46,7 @@ public class Homecontroller {
 	public Student deleteStudentById(@PathVariable int id) {
 		return studentservice.deletebyid(id);
 	}
-
+ 
 
 	@GetMapping("/student")
 	public List<Student> findall() {
